@@ -3,12 +3,9 @@ import Home from "./components/pages/home/home";
 import Menu from "./components/pages/menu/menu";
 import Navbar from "./components/pages/navbar/navbar";
 
-
-
 function App() {
   return (
     <div className='App'>
-      
       <Navbar/>
 
       <Router>
