@@ -1,7 +1,11 @@
 const Home = () => {
 
   return (
-    <h1>Estoy en el home</h1>
+    <div className="container">
+      <span className="logo">
+          Meisho
+      </span>
+    </div>
   )
 }
 

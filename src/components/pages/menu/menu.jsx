@@ -1,6 +1,6 @@
 const Menu = () => {
   return (
-    <div>Menu</div>
+    <h1>Estoy en el menu</h1>
   )
 }
 
