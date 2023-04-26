@@ -1,7 +1,5 @@
 import { AppBar, Toolbar, IconButton, Typography, Stack, Button} from '@mui/material'
-import React from 'react'
 
- 
 const Navbar = () => {
     return (
         <AppBar position="fixed" sx={{ backgroundColor: '#4F5D3C'}}>
