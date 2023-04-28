@@ -7,21 +7,16 @@ import Delivery from "./components/pages/delivery/delivery";
 
 function App() {
   return (
-    <>
-
-      <Toolbar>
-      <Navbar/>
-      </Toolbar>
-
+    <> 
       <Router>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/delivery" element={<Delivery/>} />
-        <Route path="/menu" element={<Menu/>} />
-      </Routes>
+      <Navbar/> 
+        <Routes>
+          <Route path="/" element={<Home/>} />
+            <Route path="/delivery" element={<Delivery/>} />
+            <Route path="/menu" element={<Menu/>} />
+        </Routes>
       </Router>
       <Toolbar/>
-
       </>
   );
 }
