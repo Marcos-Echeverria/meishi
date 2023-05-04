@@ -26,7 +26,7 @@ const Home = () => {
     <Box sx={description}>
     </Box>
 
-    <Grid container columns={{ xs: 4, sm: 8, md: 12 }}>
+    <Grid container columns={{ xs: 4, sm: 12, md: 12 }} spacing={10} sx={{p: 15, backgroundColor: "#f8efd8" }}>
       <Grid item xs={2} sm={4} md={4}>
         <img className="sushiImg" src="/img-home/argentina.jpg" alt="" />
       </Grid>
