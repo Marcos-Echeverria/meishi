@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-
-const DB_URI = `mongodb+srv://marcosalbertoecheverria:KmKaAweZsapjO3e0@meishodb.gob0zda.mongodb.net/`
+require('dotenv').config();
+const DB_URI = process.env.MONGO_DB
 
 module.exports = () => {
     const connect = async () => {
