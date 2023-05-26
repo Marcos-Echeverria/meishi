@@ -38,4 +38,37 @@ MenuRouter.post("/menu", async (req, res) => {
     };
 });
 
+MenuRouter.delete("/delete/:id", async (req, res) => {
+    try {
+        const {id} = req.params
+        await Menu.findByIdAndDelete(id)
+        res.status(200).send({
+            succes: true,
+            message: "Menu Eliminado"
+        });
+    } catch (error) {
+        res.status(500).send({
+            succes: false,
+            message: error.message,
+        })
+    };
+});
+
+MenuRouter.put("/update/:id", async(req, res) => {
+    try {
+        const {id} = req.params
+        const {price} = req.body
+        await Menu.findByIdAndUpdate(id, {price}) //Si en un futuro esto llegase a generar conflictos usar Model.findOneAndUpdate()
+        res.status(200).send({
+            succes: true,
+            message:"Precio modificado"
+        });
+    } catch (error) {
+        res.status(500).send({
+            succes: false,
+            message:error.message
+        })
+    };
+});
+
 module.exports = MenuRouter;
