@@ -2,7 +2,7 @@ const express = require('express');
 const Menu = require('../models/menu');
 const MenuRouter = express.Router();
 
-MenuRouter.get("/", async (req, res) => {
+MenuRouter.get("/", async (req, res) => { // http://localhost:3000/api/
     let menus = await Menu.find({});
     return res.status(200).send({
         succes:true,
@@ -10,7 +10,7 @@ MenuRouter.get("/", async (req, res) => {
     });
 });
 
-MenuRouter.post("/menu", async (req, res) => {
+MenuRouter.post("/menu", async (req, res) => { http://localhost:3000/api/menu
     try {
         const {name, price, description} = req.body
         if(!name || !price){
