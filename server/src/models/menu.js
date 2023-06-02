@@ -12,6 +12,10 @@ const MenuSchema = new mongoose.Schema({
     description: {
         type: String,
         requiered: false
+    },
+    category: {
+        type: String,
+        requiered: true
     }
 });
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { todosMenu } from "../../functions/function";
-import { Box, Typography } from "@mui/material";
+import { Box, Card, CardContent, Typography } from "@mui/material";
+import "./Menu.css"; 
 
 const Menu = () => {
   const [menus, setMenus] = useState(null);
@@ -8,27 +9,37 @@ const Menu = () => {
   useEffect(() => {
     todosMenu(setMenus);
   }, []);
-  
-  const boxStyle = {
-    marginTop: "1vh",
-  };
 
   return (
-    <>
-
-    <Box sx={boxStyle} >
-      {menus != null ? (menus.map(menu => (
-        <div key={menu.id}>
-          <Typography color="#4F5D3C">{menu.name}</Typography>
-          <Typography>{menu.description}</Typography>
-          <Typography>Precio: ${menu.price}</Typography>
-        </div>
-      ))
-      ) : ('No hay menu')}
+    <Box className="menuContainer"> 
+      {menus != null ? (
+        menus.map((menu) => {
+          if (menu.category === "Principal") {
+            return (
+              <Card key={menu._id} className="menuCard"> 
+                <CardContent>
+                  <Typography className="menuTitle" variant="h6" component="div"> 
+                    {menu.name}
+                  </Typography>
+                  <Typography className="menuDescription" variant="body2" color="text.secondary"> 
+                    {menu.description}
+                  </Typography>
+                  <Typography className="menuPrice" variant="body1"> 
+                    Precio: ${menu.price}
+                  </Typography>
+                </CardContent>
+              </Card>
+            );
+          }
+          return null;
+        })
+      ) : (
+        <Typography variant="body1">
+          El menú está en reparación. Por favor, aguarda unos minutos.
+        </Typography>
+      )}
     </Box>
-
-    </>
   );
 };
 
-export default Menu
+export default Menu;
