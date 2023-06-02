@@ -5,6 +5,4 @@ const todosMenu = async (state) => {
     state(peticion.data.menus);
 };
 
-export{
-    todosMenu
-};
+export {todosMenu};
