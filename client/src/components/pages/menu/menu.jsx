@@ -10,8 +10,11 @@ const Menu = () => {
     todosMenu(setMenus);
   }, []);
 
+  
   return (
-    <Box className="menuContainer"> 
+    <>
+    <Typography variant="h3" color="initial" align="flex-start">Menu principal</Typography>
+    <Box className="menuContainer">
       {menus != null ? (
         menus.map((menu) => {
           if (menu.category === "Principal") {
@@ -39,6 +42,7 @@ const Menu = () => {
         </Typography>
       )}
     </Box>
+    </>
   );
 };
 

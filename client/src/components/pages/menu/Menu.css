@@ -4,12 +4,13 @@
     align-items: flex-start;
     margin-top: 2vh;
     margin-right: 2vh;
-    row-gap: 1vh;
 }
 
 .menuCard {
     width: 20vw;
     margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
 }
 
 .menuTitle {
@@ -20,14 +21,12 @@
 
 .menuDescription {
     margin-bottom: 0.5rem;
-    max-height: 1rem;
-    overflow: hidden;
-    line-height: 1.2em;
 }
 
 .menuPrice {
     font-weight: bold;
 }
+
 body{
 background-color:#fffff2;
 }
