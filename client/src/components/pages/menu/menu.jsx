@@ -13,7 +13,12 @@ const Menu = () => {
   
   return (
     <>
-    <Typography variant="h3" color="initial" align="flex-start">Menu principal</Typography>
+    <Typography variant="h4" component="div" className="menuHeader">
+        <span className="menuHeaderText" style={{ fontFamily: "MiFuentePersonalizada"}}>
+          Menú principal
+        </span>
+    </Typography>
+
     <Box className="menuContainer">
       {menus != null ? (
         menus.map((menu) => {
