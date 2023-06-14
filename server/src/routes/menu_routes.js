@@ -12,7 +12,7 @@ MenuRouter.get("/", async (req, res) => { // http://localhost:3000/api/
 
 MenuRouter.post("/menu", async (req, res) => { http://localhost:3000/api/menu
     try {
-        const {name, price, description} = req.body
+        const {name, price, description, category} = req.body
         if(!name || !price){
             return res.status(400).send({
                 succes:false,
@@ -23,6 +23,7 @@ MenuRouter.post("/menu", async (req, res) => { http://localhost:3000/api/menu
             name,
             price,
             description,
+            category
         });
 
         await menus.save()
