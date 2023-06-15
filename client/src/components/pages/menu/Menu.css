@@ -3,16 +3,6 @@
     src: url("../../common/font/GrandifloraOne-Regular.ttf") format("ttf");
 }
 
-.menuHeaderText{
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 3vh;
-    margin-left: 6vh;
-}
-.Entradas{
-    display: flex;
-    justify-content: center;
-}
 .menuCard {
     width: 20vw;
     margin-bottom: 1rem;
