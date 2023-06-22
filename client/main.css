@@ -5,3 +5,10 @@
 .sushiImg{
     width: 100%;
 }
+
+@font-face {
+    font-family: "MiFuentePersonalizada";
+    src: url("../../common/font/GrandifloraOne-Regular.ttf") format("ttf");
+    font-family: "MiFuentePersonalizada2";
+    src: url("../../common/font/PetitFormalScript-Regular.ttf") format("ttf");
+}
