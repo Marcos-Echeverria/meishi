@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { todosMenu } from "../../functions/function";
 import { Box, Card, CardContent, Typography, Grid } from "@mui/material";
 import "./Menu.css";
+import Footer from "../footer/footer";
 
 const Menu = () => {
   const [menus, setMenus] = useState(null);
@@ -94,6 +95,7 @@ const Menu = () => {
           </Typography>
         )}
       </Box>
+      <Footer/>
     </>
   );
 };

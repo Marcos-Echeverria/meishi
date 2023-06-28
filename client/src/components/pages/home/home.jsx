@@ -1,7 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import OutlinedCard from "../card/card";
-
-
+import Footer from "../footer/footer";
 const Home = () => {
 
   const boxStyle = {
@@ -32,12 +31,33 @@ const Home = () => {
       <OutlinedCard />
       </Box>
     </Box>
-    <Typography variant="body1" color="initial" style={{textAlign:"center"}}>
-      ¿Quienes somos?
-      <Typography variant="body1" color="initial"> 
 
-      </Typography>
-    </Typography>
+    <Grid
+      container
+      spacing={0}
+      columns={{ xs: 12, sm: 12, md: 12 }}
+      style={{
+        textAlign: 'center',
+        height: '5rem',
+        marginTop: '3rem',
+        borderRadius: '10rem', // Agregamos bordes redondeados
+        overflow: 'hidden', // Para ocultar los bordes redondeados si el contenido se desborda
+      }}
+    >
+      <Grid item xs={12} sm={12} md={12} style={{ backgroundColor: '#4F5D3C' }}>
+        <Typography variant="body1" color="white">
+          ¿Quiénes somos?
+        </Typography>
+      </Grid>
+      <Grid item xs={12} sm={12} md={12} style={{ backgroundColor: '#4F5D3C' }}>
+        <Typography variant="body1" color="white">
+          Meisho no es solo un producto de comida común; es una experiencia meticulosamente elaborada que trasciende los
+          límites del gusto y que deleita todos tus sentidos. Diseñado para crear un viaje gastronómico inolvidable,
+          Meisho pone énfasis en ofrecer algo más que una simple comida; brinda una aventura culinaria inmersiva y
+          elevada.
+        </Typography>
+      </Grid>
+    </Grid>
 
     <Grid container columns={{ xs: 4, sm: 12, md: 12 }} spacing={10} sx={{p: 15, backgroundColor: "#fffff2" }}>
       <Grid item xs={2} sm={4} md={4}>
@@ -59,6 +79,7 @@ const Home = () => {
         <img className="sushiImg" src="/img-home/paris.jpg" alt="" />
       </Grid>
     </Grid>
+    <Footer/>
     </>
   )
 }

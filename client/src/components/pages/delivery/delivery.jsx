@@ -1,7 +1,9 @@
+import Footer from "../footer/footer"
+
 const Delivery = () => {
 
     return (
-      <h1>Estoy en el delivery</h1>
+      <Footer />
     )
   }
   
